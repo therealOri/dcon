@@ -36,7 +36,7 @@ async def help(ctx):
     
     # If you change the bots prefix, make sure to update the following text with the correct prefix/new prefix.
     helpembed = discord.Embed(title="Commands", description=('A helpful menu for all the commands this bot can do! | Made by Ori#6338'), colour=0x941db4, timestamp=datetime.datetime.utcnow())
-    helpembed.set_thumbnail(url='https://discord.com/assets/3c6ccb83716d1e4fb91d3082f6b21d77.png')
+    helpembed.set_thumbnail(url='https://discord.com/assets/3c6ccb83716d1e4fb91d3082f6b21d77.png') # This can be updated to be your bots icon.
     helpembed.add_field(name="▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬", value='\u200b', inline=False)
     helpembed.add_field(name="a.gicon", value = "Starts the timer for guild icon changing.")
     helpembed.add_field(name="a.gstop", value = "Stops the timer.", inline=False)
