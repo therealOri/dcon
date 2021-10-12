@@ -81,7 +81,7 @@ async def gicon(ctx): #"gicon" is the name of the command that will be used. Thi
     if not timer.is_running(): # If the timer isn't started, it starts the timer.
         timer.start()
         print('Timer started!')
-    else: # If the timer/this command has already been run, say it has already been started.
+    else: # If the timer/this command has already been run, say it/the timer has already been started.
         print('Timer already started')
 
 #Stops the timer
