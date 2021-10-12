@@ -95,7 +95,7 @@ async def gstop(ctx):
     await ctx.message.delete()
 
     timer.cancel()
-    embed = discord.Embed(title="**Timer!**", description="Timer has been stopped!\nThe timer can be restarted by using `a.gstart", color=discord.Color.random(), timestamp=datetime.datetime.utcnow())
+    embed = discord.Embed(title="**Timer!**", description="Timer has been stopped!\nThe timer can be restarted by using `a.gstart`", color=discord.Color.random(), timestamp=datetime.datetime.utcnow())
     embed.set_footer(text=f"{botver} | code made by Ori#6338", icon_url='https://cdn.discordapp.com/attachments/850592305420697620/850595192641683476/orio.png') #Credits for code being free.
     await ctx.send(embed=embed, delete_after=7)
 
