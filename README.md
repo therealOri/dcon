@@ -15,3 +15,7 @@ cd dcon
 
 pip3 install requirements.txt
 ```
+ <br />
+ 
+ # Disclaimer
+ > You can copy and use this code however you want, just don't say **You** are the one who made it. Give some creddit or link back to this repo.
