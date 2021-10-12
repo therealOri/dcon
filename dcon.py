@@ -39,7 +39,7 @@ async def help(ctx):
     helpembed = discord.Embed(title="Commands", description=('A helpful menu for all the commands this bot can do! | Made by Ori#6338'), colour=0x941db4, timestamp=datetime.datetime.utcnow())
     helpembed.set_thumbnail(url='https://discord.com/assets/3c6ccb83716d1e4fb91d3082f6b21d77.png') # This can be changed to your discord bots icon.
     helpembed.add_field(name="▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬", value='\u200b', inline=False)
-    helpembed.add_field(name="a.gicon", value = "Starts the timer for guild icon changing.")
+    helpembed.add_field(name="a.gstart", value = "Starts the timer for guild icon changing.")
     helpembed.add_field(name="a.gstop", value = "Stops the timer.", inline=False)
     helpembed.add_field(name="a.ping", value = "Ping Pong. (Pings the bot)", inline=False)
     helpembed.add_field(name="\u200b", value='▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬', inline=False)
@@ -77,13 +77,17 @@ async def timer():
 
 # Starts timer and icon changing
 @client.command()
-async def gicon(ctx): #"gicon" is the name of the command that will be used. This can be changed to whatever. Same goes for any of the other commands. Don't change the name for the timer.
+async def gstart(ctx): #"gicon" is the name of the command that will be used. This can be changed to whatever. Same goes for any of the other commands. Don't change the name for the timer.
     await ctx.message.delete()
     if not timer.is_running(): # If the timer isn't started, it starts the timer.
         timer.start()
-        print('Timer started!')
+        embed1 = discord.Embed(title="**Timer!**", description="Timer has been started!\nYou can stop the timer by using `a.gstop`.", color=discord.Color.random(), timestamp=datetime.datetime.utcnow())
+        embed1.set_footer(text=f"{botver} | code made by Ori#6338", icon_url='https://cdn.discordapp.com/attachments/850592305420697620/850595192641683476/orio.png') #Credits for code being free.
+        await ctx.send(embed=embed1)
     else: # If the timer/this command has already been run, say that the timer has already been started.
-        print('Timer already started')
+        embed2 = discord.Embed(title="**Timer!**", description="Timer has already been started!\nYou can stop the timer by using `a.gstop`.", color=discord.Color.random(), timestamp=datetime.datetime.utcnow())
+        embed2.set_footer(text=f"{botver} | code made by Ori#6338", icon_url='https://cdn.discordapp.com/attachments/850592305420697620/850595192641683476/orio.png') #Credits for code being free.
+        await ctx.send(embed=embed2)
 
 #Stops the timer
 @client.command()
@@ -91,7 +95,9 @@ async def gstop(ctx):
     await ctx.message.delete()
 
     timer.cancel()
-    print("Timer Stopped for guild icon chnage!")
+    embed = discord.Embed(title="**Timer!**", description="Timer has been stopped!\nThe timer can be restarted by using `a.gstart", color=discord.Color.random(), timestamp=datetime.datetime.utcnow())
+    embed.set_footer(text=f"{botver} | code made by Ori#6338", icon_url='https://cdn.discordapp.com/attachments/850592305420697620/850595192641683476/orio.png') #Credits for code being free.
+    await ctx.send(embed=embed)
 
 # Tells discord to use the token you have provided in the .env file.
 client.run(TOKEN)
