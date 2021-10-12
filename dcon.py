@@ -1,4 +1,5 @@
 # Code made by Ori#6338 | <-- DO NOT REMOVE PLS. THIS IS MY CREDITS FOR CODE BEING MADE FOR FREE.
+# Requested by a couple of users on reddit.
 
 import discord
 import os
