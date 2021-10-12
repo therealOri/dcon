@@ -83,11 +83,11 @@ async def gstart(ctx): #"gicon" is the name of the command that will be used. Th
         timer.start()
         embed1 = discord.Embed(title="**Timer!**", description="Timer has been started!\nYou can stop the timer by using `a.gstop`.", color=discord.Color.random(), timestamp=datetime.datetime.utcnow())
         embed1.set_footer(text=f"{botver} | code made by Ori#6338", icon_url='https://cdn.discordapp.com/attachments/850592305420697620/850595192641683476/orio.png') #Credits for code being free.
-        await ctx.send(embed=embed1)
+        await ctx.send(embed=embed1, delete_after=7)
     else: # If the timer/this command has already been run, say that the timer has already been started.
         embed2 = discord.Embed(title="**Timer!**", description="Timer has already been started!\nYou can stop the timer by using `a.gstop`.", color=discord.Color.random(), timestamp=datetime.datetime.utcnow())
         embed2.set_footer(text=f"{botver} | code made by Ori#6338", icon_url='https://cdn.discordapp.com/attachments/850592305420697620/850595192641683476/orio.png') #Credits for code being free.
-        await ctx.send(embed=embed2)
+        await ctx.send(embed=embed2, delete_after=7)
 
 #Stops the timer
 @client.command()
@@ -97,7 +97,7 @@ async def gstop(ctx):
     timer.cancel()
     embed = discord.Embed(title="**Timer!**", description="Timer has been stopped!\nThe timer can be restarted by using `a.gstart", color=discord.Color.random(), timestamp=datetime.datetime.utcnow())
     embed.set_footer(text=f"{botver} | code made by Ori#6338", icon_url='https://cdn.discordapp.com/attachments/850592305420697620/850595192641683476/orio.png') #Credits for code being free.
-    await ctx.send(embed=embed)
+    await ctx.send(embed=embed, delete_after=7)
 
 # Tells discord to use the token you have provided in the .env file.
 client.run(TOKEN)
