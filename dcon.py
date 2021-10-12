@@ -71,7 +71,7 @@ async def timer():
             icon = f.read()
         
         # This gets the guilds ID this bot is in and edits the guild icon.
-        guild = client.get_guild(GUILD_ID_HERE)
+        guild = client.get_guild(YOUR_GUILD_ID_HERE)
         await guild.edit(icon=icon)
 
 
