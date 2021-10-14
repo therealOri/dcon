@@ -1,6 +1,4 @@
 enhanced-dpy
-os
-random
 colorama
 python-dotenv
 asyncio
