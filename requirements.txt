@@ -1,5 +1,4 @@
 enhanced-dpy
 colorama
 python-dotenv
-asyncio
 datetime
