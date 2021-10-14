@@ -8,7 +8,6 @@ from dotenv import load_dotenv # This is for the .env file you will put your tok
 import colorama
 from colorama import Fore
 from discord.ext import commands, tasks
-import asyncio
 import datetime
 
 load_dotenv() # This loads the .env file
